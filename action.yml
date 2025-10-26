@@ -9,8 +9,8 @@ inputs:
     default: "Gemfile.lock"
     required: false
   gem_compare_version:
-    description: "Version of the gem-compare plugin"
-    default: "1.2.1"
+    description: "Version of the skillnad plugin"
+    default: "1.2.2"
     required: false
   pr_diff:
     description: "Output from 'git diff' for Gemfile.lock"
@@ -66,10 +66,10 @@ runs:
           echo EOF
         } >> "$GITHUB_ENV"
 
-    - name: Run gem install gem-compare
+    - name: Run gem install skillnad
       shell: bash
       run: |
-        with_retries gem install gem-compare --version ${{ inputs.gem_compare_version }} || true
+        with_retries gem install skillnad --version ${{ inputs.gem_compare_version }} || true
 
     - name: Run compare steps
       shell: bash

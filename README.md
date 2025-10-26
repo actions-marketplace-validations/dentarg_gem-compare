@@ -2,7 +2,7 @@
 
 Reads the lockfile (`Gemfile.lock` by default) diff and posts comments with the output from `gem compare` and `gem compare --diff` for the gems that changed version.
 
-Uses https://rubygems.org/gems/gem-compare (https://github.com/fedora-ruby/gem-compare).
+Uses https://rubygems.org/gems/skillnad (https://github.com/dentarg/skillnad).
 
 To use in your repo, add a workflow like this:
 
